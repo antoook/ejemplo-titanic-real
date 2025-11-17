@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Carga el archivo CSV "database_titanic.csv" en un DataFrame de pandas.
 df = pd.read_csv("database_titanic.csv")
@@ -24,11 +24,11 @@ with st.sidebar:
     st.write("Bins=", div)
 
 # Desplegamos un histograma con los datos del eje X
-fig, ax = plt.subplots(1, 2, figsize=(10, 3))
-ax[0].hist(df["Age"], bins=div)
-ax[0].set_xlabel("Edad")
-ax[0].set_ylabel("Frecuencia")
-ax[0].set_title("Histograma de edades")
+#fig, ax = plt.subplots(1, 2, figsize=(10, 3))
+#ax[0].hist(df["Age"], bins=div)
+#ax[0].set_xlabel("Edad")
+#ax[0].set_ylabel("Frecuencia")
+#ax[0].set_title("Histograma de edades")
 
 # Tomando datos para hombres y contando la cantidad
 df_male = df[df["Sex"] == "male"]
@@ -38,13 +38,13 @@ cant_male = len(df_male)
 df_female = df[df["Sex"] == "female"]
 cant_female = len(df_female)
 
-ax[1].bar(["Masculino", "Femenino"], [cant_male, cant_female], color = "red")
-ax[1].set_xlabel("Sexo")
-ax[1].set_ylabel("Cantidad")
-ax[1].set_title('Distribución de hombres y mujeres')
+#ax[1].bar(["Masculino", "Femenino"], [cant_male, cant_female], color = "red")
+#ax[1].set_xlabel("Sexo")
+#ax[1].set_ylabel("Cantidad")
+#ax[1].set_title('Distribución de hombres y mujeres')
 
 # Desplegamos el gráfico
-st.pyplot(fig)
+#st.pyplot(fig)
 
 st.write("""
 ## Muestra de datos cargados
