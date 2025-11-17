@@ -1,3 +1,4 @@
+!pip install streamlit
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -51,3 +52,4 @@ st.write("""
 """)
 # Graficamos una tabla
 st.table(df.head())
+!streamlit run ejemplo_titanic.py
